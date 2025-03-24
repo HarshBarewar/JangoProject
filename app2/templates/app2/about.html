@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Ramdeoababa College</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?college,education') no-repeat center center/cover;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">Ramdeoababa College</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>About Ramdeoababa College</h1>
+        </div>
+    </section>
+
+    <!-- College History -->
+    <section class="section text-center">
+        <div class="container">
+            <h2>Our Legacy</h2>
+            <p>Founded in 1984, Ramdeoababa College has been a pillar of excellence in education for over 40 years.</p>
+            <p>We strive to nurture talent, foster innovation, and prepare students for a brighter future.</p>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="section bg-light text-center">
+        <div class="container">
+            <h2>Our Mission & Vision</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Mission</h4>
+                    <p>To provide high-quality education that empowers students to achieve excellence in their respective fields.</p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Vision</h4>
+                    <p>To be a globally recognized institution that nurtures innovation, creativity, and leadership.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Life -->
+    <section class="section text-center">
+        <div class="container">
+            <h2>Campus Life</h2>
+            <p>Our campus is a vibrant hub of learning, with state-of-the-art facilities, libraries, and research centers.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="https://source.unsplash.com/400x300/?library,college" class="img-fluid rounded" alt="Library">
+                    <h5>World-Class Library</h5>
+                </div>
+                <div class="col-md-4">
+                    <img src="https://source.unsplash.com/400x300/?students,classroom" class="img-fluid rounded" alt="Classroom">
+                    <h5>Smart Classrooms</h5>
+                </div>
+                <div class="col-md-4">
+                    <img src="https://source.unsplash.com/400x300/?sports,college" class="img-fluid rounded" alt="Sports">
+                    <h5>Sports & Extracurriculars</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="section bg-light text-center">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Email: info@ramdeoababa.edu.in | Phone: +91 98765 43210</p>
+            <p>Address: Ramdeoababa College, Nagpur, India</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Ramdeoababa College | All Rights Reserved</p>
+        <p>Follow us: <a href="#" class="text-light">Facebook</a> | <a href="#" class="text-light">Twitter</a></p>
+    </footer>
+
+    
+</body>
+</html>
