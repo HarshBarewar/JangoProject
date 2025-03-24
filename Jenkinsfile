@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/HarshBarewar/JangoProject.git'
+                git branch: 'main', url: 'https://github.com/HarshBarewar/JangoProject.git'
             }
         }
 
@@ -25,8 +25,8 @@ pipeline {
             steps {
                 withDockerRegistry([credentialsId: 'docker-hub-credentials', url: '']) {
                     script {
-                        sh 'docker tag $DOCKER_IMAGE $harshbarewar/$DOCKER_IMAGE'
-                        sh 'docker push $harshbarewar/$DOCKER_IMAGE'
+                        sh 'docker tag $DOCKER_IMAGE $DOCKER_HUB_USERNAME/$DOCKER_IMAGE'
+                        sh 'docker push $DOCKER_HUB_USERNAME/$DOCKER_IMAGE'
                     }
                 }
             }
@@ -35,16 +35,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    sh 'docker run -d -p 8000:8000 $/$DOCKER_IMAGE'
+                    sh 'docker run -d -p 8000:8000 $DOCKER_HUB_USERNAME/$DOCKER_IMAGE'
                 }
             }
         }
-
-        stage('Clone Repository') {
-    steps {
-        git branch: 'main', url: 'https://github.com/HarshBarewar/JangoProject.git'
-    }
-}
-
     }
 }
