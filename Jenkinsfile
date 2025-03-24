@@ -39,5 +39,12 @@ pipeline {
                 }
             }
         }
+
+        stage('Clone Repository') {
+    steps {
+        git branch: 'main', url: 'https://github.com/HarshBarewar/JangoProject.git'
+    }
+}
+
     }
 }
